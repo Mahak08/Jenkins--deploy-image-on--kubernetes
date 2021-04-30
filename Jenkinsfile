@@ -3,7 +3,7 @@ pipeline{
     stages{
       stages("abc"){
         steps{
-          sh "date"
+          sh "kubectl apply -f deploy.yml --kubeconfig /admin-config"
         }
       }
     }
